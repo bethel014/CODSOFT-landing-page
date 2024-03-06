@@ -1,7 +1,45 @@
-html {
+* {
   margin: 0;
   padding: 0;
 }
+@media (max-width: 700px) {
+  header {
+    display: none !important;
+  }
+  h1 {
+    font-size: 32px !important;
+  }
+  h2 {
+    font-size: 30px !important;
+  }
+  h3 {
+    font-size: 26px !important;
+  }
+  main {
+    height: 50vh !important;
+  }
+  section.about {
+    margin-top: 0 !important;
+    padding-top: 50px;
+  }
+  .services-container p {
+    display: none;
+  }
+  div.services-container,
+  .feedback-container {
+    display: block !important;
+  }
+  .feedback-container div {
+    margin-top: 20px;
+  }
+}
+@media (min-width: 701px) and (max-width: 958px) {
+  .services-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
 :root {
   --primary-color: bisque;
 }
@@ -9,7 +47,7 @@ body {
   font-family: "Mooli", sans-serif;
   font-weight: 400;
   font-style: normal;
-  background-color: #f6e2cb;
+  background-color: #ccb7a0;
 }
 h1,
 h2,
@@ -22,17 +60,17 @@ main {
   border-radius: 5px;
 }
 header {
-  display: flex;
-  margin-left: 50px;
-  align-items: center;
+  padding: 5px 0 0 50px;
 }
-header i {
-  padding: 30px 10px;
-}
+
 h1 {
   font-size: 42px;
   margin: 0;
   padding: 0;
+}
+p,
+h4 {
+  margin: 10px;
 }
 main {
   height: 100vh;
@@ -56,18 +94,24 @@ footer {
   text-align: center;
 }
 section.about {
-  margin-top: 50px;
+  margin-top: 150px;
 }
+
 section.about a {
   font-size: 19px;
 }
+
 div.services-container,
 .feedback-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
+
 div.services-container p {
   width: 70%;
+}
+.services-container {
+  margin: 20px;
 }
 div.sales img {
   padding: 10px;
